@@ -1,0 +1,12 @@
+.dialer {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap; }
+  @media screen and (max-width: 764px) {
+    .dialer {
+      width: 90%; } }
+  .dialer .btn {
+    width: 32%;
+    border: 1px solid black;
+    padding-bottom: 32%; }

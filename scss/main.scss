@@ -1,0 +1,25 @@
+@extend 'variables';
+
+.dialer {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+
+  @media screen and (max-width: $small-mobile) {
+    width: 90%;
+  }
+  @media screen and (max-width: $big-mobile) {
+    width: 70%;
+  }
+  @media screen and (min-width: $tablet) {
+    width: 90%;
+  }
+
+  .btn {
+    width: 32%;
+    border: 1px solid black;
+    height: 50px;
+
+  }
+}
