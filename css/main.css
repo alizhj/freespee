@@ -2,11 +2,32 @@
   width: 50%;
   margin: 0 auto;
   display: flex;
-  flex-wrap: wrap; }
-  @media screen and (max-width: 764px) {
+  flex-wrap: wrap;
+  border: 2px solid black; }
+  @media screen and (max-width: 500px) {
+    .dialer {
+      width: 90%; } }
+  @media screen and (max-width: 765px) {
+    .dialer {
+      width: 70%; } }
+  @media screen and (min-width: 991px) {
     .dialer {
       width: 90%; } }
   .dialer .btn {
-    width: 32%;
-    border: 1px solid black;
-    padding-bottom: 32%; }
+    width: 32.3%;
+    border: 2px solid black;
+    height: 100px;
+    position: relative;
+    cursor: pointer; }
+    .dialer .btn p {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin: 0;
+      font-size: 40px; }
+
+.submit {
+  width: 500px;
+  height: 50px;
+  background-color: green; }
