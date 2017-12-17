@@ -5,12 +5,17 @@ $( document ).ready(function() {
     e.preventDefault();
 
     var target = $(this);
+
+    //get the uniqe value and add class active
     var value = target.attr('data-value');
     target.addClass('active');
+
+    //remove class active
     setTimeout(function(){
         target.removeClass('active');
     },200);
 
+    //show value in input and add next value
     var showInput = $('.result');
     showInput.val( showInput.val() + value );
   });
@@ -26,16 +31,17 @@ $( document ).ready(function() {
     var res = result.split('');
 
     //remove all non number values from array
-    var cleanRes = res.filter(function(el) {
+    var cleanResult = res.filter(function(el) {
       return el.length && el==+el;
     });
 
     var total = 0;
     //sum every number in array
-    for (var i = 0; i < cleanRes.length; i++) {
-        total += cleanRes[i] << 0;
+    for (var i = 0; i < cleanResult.length; i++) {
+        total += cleanResult[i] << 0;
     }
-    //console.log(total);
+
+    //
     $('.result').html(total);
   });
 });
