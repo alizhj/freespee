@@ -3,8 +3,13 @@ $( document ).ready(function() {
 
   $('.btn').on('click', function(e) {
     e.preventDefault();
+
     var target = $(this);
     var value = target.attr('data-value');
+    target.addClass('active');
+    setTimeout(function(){
+        target.removeClass('active');
+    },200);
 
     var showInput = $('.result');
     showInput.val( showInput.val() + value );
@@ -26,16 +31,11 @@ $( document ).ready(function() {
     });
 
     var total = 0;
+    //sum every number in array
     for (var i = 0; i < cleanRes.length; i++) {
         total += cleanRes[i] << 0;
     }
-    console.log(total);
-
-
-    // $.each(cleanRes, function (index, value) {
-    //   console.log(value);
-    // });
+    //console.log(total);
+    $('.result').html(total);
   });
-
-
 });
